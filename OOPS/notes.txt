@@ -1,0 +1,18 @@
+class ek blueprint h jisse hm object bnate h 
+class Car{
+
+    constructor(color, model){
+
+        this.color = color;
+        this.model = model;
+
+    }
+
+}
+object kese bnaunga ?
+let car1 = new Car("Red","BMW");
+let car2 = new Car("Black","Audi");
+Constructor ka kaam ?
+Initialization : Matlab ,Object ke andar values bharna.
+
+Method :Function jo class ke andar likha jaye.

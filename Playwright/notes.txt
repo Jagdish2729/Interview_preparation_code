@@ -1,0 +1,40 @@
+ install : npm init playwright@latest
+
+// Wait for element to be visible
+await page.locator('#successMessage').waitFor({ state: 'visible' });
+
+await page.waitForLoadState('networkidle');
+
+
+//FRAMES
+use framelocator()  refer iframe.js
+
+//page.on()
+page.on() is an event listener in Playwright. It lets you listen for things that happen on a page
+syntax : page.on(eventName, callback);
+eventName → The event you want to listen for.
+callback → The function that runs whenever that event occurs.
+refer alerts.js for code
+
+
+Promise.all() ka matlab hai:
+"In sab promises ko ek saath start karo aur sab complete hone ka wait karo."
+Promise.all() ek array return karta hai.    
+refer newpage.js
+
+fileupload : setinputfiles
+
+
+page.route() : Ye bolta hai:
+"Is URL par jo bhi request jaayegi, usko pehle mere paas bhejna."
+fulfill() ka matlab:
+"Request complete kar do aur ye response browser ko bhej do."
+
+Q: route.fulfill() kya karta hai?
+Answer:Ye actual API call ko rok kar Playwright se custom response return karta hai.
+
+Q: page.route() ka purpose kya hai?
+Answer:Ye network request ko intercept karta hai. Uske baad hum request ko:
+route.continue() → normally server tak bhej sakte hain.
+route.abort() → request cancel kar sakte hain.
+route.fulfill() → fake/custom response de sakte hain.

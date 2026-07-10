@@ -1,0 +1,13 @@
+ A :agr count krna ho 
+
+let count = 0;
+ if (condition) {
+    count++;
+ }
+
+ B : agar sum nikalna ho toh 
+  let sum = 0;
+
+  if (condition) {
+     sum += arr[i];
+ }
